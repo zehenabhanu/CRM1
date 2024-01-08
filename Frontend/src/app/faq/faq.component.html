@@ -1,0 +1,18 @@
+
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+    <form [formGroup]="faqForm">
+        <h2>FAQ:</h2>
+        <div class="mb-3">
+          <label class="form-label">Question:</label>
+          <input class="form-control" type="text" name="question" formControlName="question">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Answer:</label>
+          <input type="text" class="form-control" name="answer" formControlName="answer">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="faqForm.invalid" (click)="faqfun()">Submit</button>
+      </form>
+    </div>
+</div>

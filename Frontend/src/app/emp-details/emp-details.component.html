@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Sno.:</th>
+        <th scope="col">Name:</th>
+        <th scope="col">Email:</th>
+        <th scope="col">Phone:</th>
+        <th scope="col">Actions:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ed of empdetails">
+        <th scope="row">{{ed.id}}</th>
+        <td>{{ed.name}}</td>
+        <td>{{ed.email}}</td>
+        <td>{{ed.phone}}</td> 
+        <td><button class="btn btn-success" (click)="delempdet(ed.id)">Delete</button></td>   
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </div>

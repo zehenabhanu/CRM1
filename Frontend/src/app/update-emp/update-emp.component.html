@@ -1,0 +1,26 @@
+
+<div class="row">
+    <div class="col-sm-2">
+  
+    </div>
+    <div class="col-sm-8">
+      <form [formGroup]="updateEmpForm">
+        <div class="mb-3">
+          <label class="form-label">Employee Name:</label>
+          <input type="text" class="form-control" name="name" formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Employee Email:</label>
+            <input type="email" class="form-control" name="email" formControlName="email">
+          </div>
+        <div class="mb-3">
+          <label class="form-label">Employee Phone:</label>
+          <input type="text" class="form-control" name="phone" formControlName="phone">
+        </div>
+        <button type="submit" (click)="updateEmp()" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    <div class="col-sm-2">
+  
+    </div>
+  </div>

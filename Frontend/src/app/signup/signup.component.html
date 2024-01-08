@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-sm-4"></div>
+    
+    <div class="col-sm-4">
+<form [formGroup]="signupForm">
+  
+    <div class="mb-3">
+      <!--label  class="form-label">User Name:</label-->
+      <input type="text" class="form-control"  name="name" formControlName="name" placeholder="Name">
+    </div>
+    <div class="mb-3">
+      <!--label  class="form-label">User Phone:</label-->
+      <input type="text" class="form-control" name="mbl" formControlName="mbl" placeholder="Phone">
+    </div>
+    <div class="mb-3">
+        <!--label class="form-label">User Email:</label-->
+        <input type="email" class="form-control" name="email" formControlName="email" placeholder="Email">
+      </div>  
+      <div class="mb-3">
+        <!--label class="form-label">Address:</label-->
+        <input type="text" class="form-control" name="address" formControlName="address" placeholder="Address">
+      </div>
+      <div class="mb-3">
+        <!--label class="form-label">Create Username:</label-->
+        <input type="text" class="form-control" name="username" formControlName="username" placeholder="Create Username">
+      </div>
+      <div class="mb-3">
+        <!--label class="form-label">Create Password:</label-->
+        <input type="password" class="form-control" name="password" formControlName="password" placeholder="Create Password">
+      </div>
+      <div class="mb-3">
+        <!--label class="form-label">Confirm Password:</label-->
+        <input type="password" class="form-control" name="cpassword" formControlName="cpassword" placeholder="Confirm Password">
+      </div>
+    <button type="submit" class="btn btn-primary" [disabled]="signupForm.invalid" (click)="signupfunc()">Submit</button>
+  </form>
+  <span class="me-md-3">Already have an account?</span>
+  <a routerLink="/login">Login Here</a>
+  </div>
+</div>
+
+
+<!-- signup.component.html -->

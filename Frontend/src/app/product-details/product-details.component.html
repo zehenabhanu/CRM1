@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<form [formGroup]="pdForm">
+    <div class="mb-3">
+      <label class="form-label">Product Code</label>
+      <input type="number" class="form-control" name="pcode" formControlName="pcode">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Product Name</label>
+      <input type="text" class="form-control" name="pdname" formControlName="pdname">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Details</label>
+      <input type="text" class="form-control" name="details" formControlName="details">  
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Product Category :</label>
+        <select class="form-control" name="pcategory" formControlName="pcategory">
+            <option value="Home & Garden">Home & Garden</option>
+            <option value="Style & Fashion">Style & Fashion</option>
+            <option value="Medical Health">Medical Health</option>
+          </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Price</label>
+      <input type="number" class="form-control" name="price" formControlName="price">  
+    </div>
+    <button class="btn btn-primary me-md-2" type="reset" value="Reset">Clear</button>
+        <button type="submit" class="btn btn-primary" [disabled]="pdForm.invalid" (click)="pdfunc()">Submit</button>
+  </form>
+</div>
+<div class="col-sm-2"></div>
+</div>

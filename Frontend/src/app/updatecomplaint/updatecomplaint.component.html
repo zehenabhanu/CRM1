@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-sm-2"> 
+    </div>
+    <div class="col-sm-8">
+      <form [formGroup]="updateComplaintForm">
+        <div class="mb-3">
+          <label class="form-label">Product name:</label>
+          <input type="text" class="form-control" name="pname" formControlName="pname">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Subject:</label>
+          <input type="text" class="form-control" name="subject" formControlName="subject">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Complaint:</label>
+          <input type="email" class="form-control" name="complaint" formControlName="complaint">
+        </div>
+        <button type="submit" (click)="updateComplaint()" class="btn btn-success">Ok</button>
+      </form>
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>

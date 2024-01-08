@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-2"></div>
+<div class="col-sm-8">
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Product Code</th>
+        <th>Product Name</th>
+        <th>Subject</th>
+        <th>Complaint</th>
+        <th colspan="2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ncl of newComplaintList">
+        <td>{{ncl.id}}</td>
+        <td>{{ncl.pname}}</td>
+        <td>{{ncl.subject}}</td>
+        <td>{{ncl.complaint}}</td>
+        <td><button class="btn btn-success" (click)="delcomplaintfunc(ncl.id)" >Delete</button></td>
+        <td><button class="btn btn-warning" routerLink="/RaiseComplaint/{{ncl.id}}" >Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <div class="col-sm-2"></div>
+</div>
+

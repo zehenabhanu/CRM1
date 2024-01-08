@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+        <h2>Raise New Ticket</h2>
+        <form [formGroup]="rcForm">
+            <div class="mb-3">
+                <label class="form-label">Product name:</label>
+                <input type="text" class="form-control" name="pname" formControlName="pname">
+              </div>
+            <div class="mb-3">
+              <label class="form-label">Subject:</label>
+              <input type="text" class="form-control" name="subject" formControlName="subject">
+            </div>
+            <div>
+            <label class="form-label">Complaint:</label>
+            <input type="text" class="form-control" name="complaint" formControlName="complaint">
+        </div>
+        <button type="reset" class="btn btn-primary me-md-3" value="reset">Clear</button>
+            <button type="submit" class="btn btn-primary" [disabled]="rcForm.invalid" (click)="rcfunc()">Submit</button>
+          </form>
+    </div>
+</div>

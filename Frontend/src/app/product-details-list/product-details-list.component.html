@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <h1>Product Details</h1>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product Code</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Details</th>
+                    <th scope="col">category Name</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let pd of productdetails">
+                    <th scope="row">{{pd.pcode}}</th>
+                    <td>{{pd.pdname}}</td>
+                    <td>{{pd.details}}</td>
+                    <td>{{pd.pcategory}}</td>
+                    <td>{{pd.price}}</td>
+                  </tr>
+                </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+<!--<div>   
+   <img src="assets\CRM.jpeg" class="rounded float-end" alt="Customer Relationship Management">
+   <div><p>Customer relationship management (CRM) is a technology for managing all your company's relationships and interactions with customers and potential customers.
+    The goal is simple: Improve business relationships.
+    A CRM system helps companies stay connected to customers, streamline processes, and improve profitability.</p>
+   </div>
+    <div><h5>To Contact Us:</h5>
+        <p>09876543215</p></div>   
+</div>
+-->
+
+<div class="row">
+  <div class="col-sm-1"></div>
+     <div class="col-sm-4">
+    <form [formGroup]="crmsForm">
+        <h4>Fill out the form to watch the Demo...</h4>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="First Name" name="fname" formControlName="fname">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Last Name" name="lname" formControlName="lname">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email" name="email" formControlName="email">
+          </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Mobile number" name="phone" formControlName="phone">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Country" name="country" formControlName="country">
+          </div>
+          <button type="reset" class="btn btn-primary me-md-2" value="reset">Clear</button>
+        <button type="submit" class="btn btn-primary" [disabled]="crmsForm.invalid" (click)="crmsFunc()">Submit</button>
+      </form>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3">
+      <img src="assets\crm2.jpeg" height="350" width="600" alt="CRM">
+    </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-7">
+<h3>See how CRM is helping businesses of every size with:</h3>
+<ul>
+  <li>Lead and contact management</li>
+  <li>Sales opportunity management</li>
+  <li>Customisable reports and dashboards</li> 
+</ul>
+</div>
+</div>
+<hr>
+<h1>Benefits</h1>
+<hr>
+<div class="d-flex justify-content-evenly">
+<div class="card" style="width: 15rem;">
+    <div class="card-body">
+      <h5 class="card-title">Better Marketing</h5>
+      <p class="card-text"> CRM allows you to create more targeted marketing aimed at your customers' specific needs</p>
+    </div>
+  </div>
+  <div class="card" style="width: 15rem;">
+    <div class="card-body">
+      <h5 class="card-title">Trustworthy reporting</h5>
+      <p class="card-text">CRM improves sales forecasting and productivity, increases customer loyalty, enables accurate sales reporting, maximises marketing ROI and improves service.</p>
+    </div>
+  </div>
+  <div class="card" style="width: 15rem;">
+    <div class="card-body">
+      <h5 class="card-title">Analytics</h5>
+      <p class="card-text">It requires powerful analytics tools to pull up the right data points and visualize meaningful insights that are actionable.</p>
+    </div>
+  </div>
+  <div class="card" style="width: 15rem;">
+    <div class="card-body">
+      <h5 class="card-title">Enhanced Communication</h5>
+      <p class="card-text">CRM makes it possible for any employee to provide the same high level of service, by having access to the same customer data.</p>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-sm-9"></div>
+  <div class="col-sm-3">
+      <h3>To Contact Us:</h3>
+      <p>zehenabhanu@gmail.com</p>
+      <p>6281108776</p>
+      <h4>Whatsapp:</h4>
+      <p>6281108776</p>
+  </div>
+</div>
+
+
+
+
