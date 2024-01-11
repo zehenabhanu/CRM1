@@ -2,14 +2,14 @@
     <div class="col-sm-2"></div>
     <div class="col-sm-1"></div>
     <div class="col-sm-6">
-        <form [formGroup]="postAdminForm">
+        <form>
             <div class="mb-3">
-                <label  class="form-label">Admin Name:</label>
-                <input type="text" class="form-control" name="aname" formControlName="aname">
+                <label  class="form-label">AdminName:</label>
+                <input type="text" class="form-control" name="admin" id="admin" [(ngModel)]="admin.admin">
               </div>
             <div class="mb-3">
                 <label  class="form-label">Password:</label>
-                <input type="password" class="form-control" name="password" formControlName="password">
+                <input type="password" class="form-control" name="password" id="password" [(ngModel)]="admin.password">
               </div>
               <button type="submit" class="btn btn-primary" (click)="adminLogin()">Login</button>
         </form>

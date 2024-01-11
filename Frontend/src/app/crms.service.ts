@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Admin, Emp, User } from './user';
 const BASIC_URL=["http://localhost:8080"];
 @Injectable({
   providedIn: 'root'
@@ -76,4 +77,18 @@ export class CrmsService {
   putEmployeeDetails(id:any,empDet:any):Observable<any>{
     return this.http.put(BASIC_URL+"/emp/put/"+id,empDet);
   }
+  
+  postuserLogin(user:User):Observable<any>{
+    return this.http.post(BASIC_URL+"/user/addd",user); 
+  }
+
+  postempLogin(emp:Emp):Observable<any>{
+    return this.http.post(BASIC_URL+"/emp1/add",emp); 
+  }
+
+  postadminLogin(admin:Admin):Observable<any>{
+    return this.http.post(BASIC_URL+"/admin/add",admin); 
+  }
 }
+
+

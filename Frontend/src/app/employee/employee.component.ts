@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Emp } from '../user';
+import { CrmsService } from '../crms.service';
 
 @Component({
   selector: 'app-employee',
@@ -8,7 +10,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent {
-  empForm!:FormGroup
+
+  emp:Emp=new Emp();
+  constructor(private route:Router,private service:CrmsService){}
+  ngOnInit(){
+
+  }
+  empLogin(){
+    this.service.postempLogin(this.emp).subscribe((res)=>{
+      console.log(res);
+      alert("Login successfully");
+      this.route.navigateByUrl("/EmpPage");
+    },error=>alert("Please enter Correct UserId or Password")
+    )   
+  }
+
+  /*empForm!:FormGroup
 constructor(private route:Router,private fb: FormBuilder){}
 ngOnInit(){
   this.empForm=this.fb.group({
@@ -19,5 +36,5 @@ ngOnInit(){
 EmpLogin(){
 console.log(this.empForm.value);
 this.route.navigateByUrl("/EmpPage");
-}
+}*/
 }

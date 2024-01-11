@@ -41,7 +41,6 @@ const routes: Routes = [
   {path:'FAQ',component:FAQComponent},
   {path:'FaqList',component:FaqListComponent},
   {path:'EmpDetails',component:EmpDetailsComponent},
-
 ];
 
 @NgModule({
